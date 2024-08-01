@@ -1,4 +1,4 @@
-package com.springboot.mercadona;
+package com.springboot;
 
 import org.junit.jupiter.api.Test;
 

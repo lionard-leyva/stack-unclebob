@@ -1,4 +1,4 @@
-package com.springboot.mercadona;
+package com.springboot;
 
 public class Fifo {
 
@@ -26,8 +26,8 @@ public class Fifo {
 
     public int pop() {
         if (size == 0) throw new IllegalArgumentException();
-        return this.elements[--size];
-       // return this.element3[r++];
+       /// return this.elements[--size];
+        return this.element3[r++];
     }
 }
 
