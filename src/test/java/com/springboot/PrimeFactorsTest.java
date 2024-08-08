@@ -18,22 +18,21 @@ class PrimeFactorsTest {
         assertThat(factorOf(6), contains(2, 3));
         assertThat(factorOf(7), contains(7));
         assertThat(factorOf(8), contains(2, 2, 2));
+        assertThat(factorOf(9), contains(3, 3));
 
 
     }
 
     private List<Integer> factorOf(int n) {
         ArrayList<Integer> factors = new ArrayList<>();
-        if (n > 1) {
-            while (n % 2 == 0) {
-                factors.add(2);
-                n /= 2;
+        int divisor = 2;
+        while (n > 1) {
+            while (n % divisor == 0) {
+                factors.add(divisor);
+                n /= divisor;
             }
+            divisor++;
         }
-        if (n > 1)
-            factors.add(n);
-
-
-        return factors;
+      return factors;
     }
 }
